@@ -1,0 +1,21 @@
+﻿@model IEnumerable<WebMVCEx01.Models.Emp>
+
+<h2>Employee List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Eid</th>
+            <th>EDetails</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.EId</td>
+                <td>@Html.Partial("ourpview", emp)</td>
+            </tr>
+        }
+    </tbody>
+</table>
